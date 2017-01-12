@@ -11,12 +11,23 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    @IBOutlet weak var friendNames: UITextField!
     
-    @IBOutlet weak var friendAmounts: UITextField!
+    @IBOutlet var friendNames: [UITextField]!
+    
+    @IBOutlet var amountsOwed: [UITextField]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Make it so that each time a text box is edited, the contents of all text boxes are saved
+        for subview in self.view.subviews {
+            if let textField = subview as? UITextField {
+                textField.addTarget(self, action: #selector(self.saveAmountOwed), for: .editingDidEnd)
+                
+            }
+        }
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +35,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func saveAmountOwed() {
+        for (position, friendName) in friendNames.enumerated() {
+            print(position)
+            print(friendName)
+        }
+    }
 
 }
 

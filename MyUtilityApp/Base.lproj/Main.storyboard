@@ -116,8 +116,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="friendAmounts" destination="HG8-MN-Jl1" id="jPn-c0-LdH"/>
-                        <outlet property="friendNames" destination="Daj-HI-7xi" id="qLU-kD-sW6"/>
+                        <outletCollection property="friendNames" destination="hNC-v1-baG" collectionClass="NSMutableArray" id="mnh-SO-v2E"/>
+                        <outletCollection property="friendNames" destination="oma-in-HuD" collectionClass="NSMutableArray" id="5T7-Vb-DjG"/>
+                        <outletCollection property="friendNames" destination="2gx-Pq-GOg" collectionClass="NSMutableArray" id="I4Q-B9-H3L"/>
+                        <outletCollection property="friendNames" destination="ddP-mV-i44" collectionClass="NSMutableArray" id="0Vz-jr-6XD"/>
+                        <outletCollection property="friendNames" destination="Daj-HI-7xi" collectionClass="NSMutableArray" id="VNj-O4-Nb1"/>
+                        <outletCollection property="amountsOwed" destination="k9A-bP-hRn" collectionClass="NSMutableArray" id="HOH-qp-BNt"/>
+                        <outletCollection property="amountsOwed" destination="4YV-pI-oqg" collectionClass="NSMutableArray" id="ndc-bd-sAC"/>
+                        <outletCollection property="amountsOwed" destination="bAf-AP-CeP" collectionClass="NSMutableArray" id="Dau-32-UEg"/>
+                        <outletCollection property="amountsOwed" destination="vO6-HN-4SA" collectionClass="NSMutableArray" id="3Ue-AC-Bue"/>
+                        <outletCollection property="amountsOwed" destination="HG8-MN-Jl1" collectionClass="NSMutableArray" id="UTD-z0-27m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
