@@ -16,6 +16,9 @@ class ViewController: UIViewController {
     
     @IBOutlet var amountsOwed: [UITextField]!
     
+    // A place to store all of the loans I have made.
+    var loans : [Loan] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,6 +33,12 @@ class ViewController: UIViewController {
                 
             }
         }
+        
+        // Initialize the loans array with an empty set of loans
+        for _ in 0...4 {
+            loans.append(Loan(name: "", amount: 0))
+            
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -37,10 +46,24 @@ class ViewController: UIViewController {
     }
 
     func saveAmountOwed() {
+        
+        // Saves all the names
         print("about to list all the friends")
         for (position, friendName) in friendNames.enumerated() {
-            print(position)
-            print(friendName.text)
+            
+            if let name = friendName.text {
+                loans[position].name = name
+                
+            }
+            
+        }
+        
+        // Saves all the loan amounts
+        for (position, amountOwed) in amountsOwed.enumerated() {
+            
+            if let amount = Double(amountOwed.text!) {
+                loans[position].amount = amount
+            }
         }
     }
 
