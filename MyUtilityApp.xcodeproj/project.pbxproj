@@ -12,6 +12,7 @@
 		3FE1BBD21DE73DC50056636B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1BBD01DE73DC50056636B /* Main.storyboard */; };
 		3FE1BBD41DE73DC50056636B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1BBD31DE73DC50056636B /* Assets.xcassets */; };
 		3FE1BBD71DE73DC50056636B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE1BBD51DE73DC50056636B /* LaunchScreen.storyboard */; };
+		60E414481E2D6E140090D329 /* Loans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E414471E2D6E140090D329 /* Loans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3FE1BBD31DE73DC50056636B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FE1BBD61DE73DC50056636B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FE1BBD81DE73DC50056636B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60E414471E2D6E140090D329 /* Loans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Loans.swift; path = ../Loans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		3FE1BBCB1DE73DC50056636B /* MyUtilityApp */ = {
 			isa = PBXGroup;
 			children = (
+				60E414471E2D6E140090D329 /* Loans.swift */,
 				3FE1BBCC1DE73DC50056636B /* AppDelegate.swift */,
 				3FE1BBCE1DE73DC50056636B /* ViewController.swift */,
 				3FE1BBD01DE73DC50056636B /* Main.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FE1BBCF1DE73DC50056636B /* ViewController.swift in Sources */,
+				60E414481E2D6E140090D329 /* Loans.swift in Sources */,
 				3FE1BBCD1DE73DC50056636B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +304,7 @@
 				3FE1BBDD1DE73DC50056636B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
