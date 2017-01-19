@@ -34,11 +34,33 @@ class ViewController: UIViewController {
             }
         }
         
-        // Initialize the loans array with an empty set of loans
-        for _ in 0...4 {
-            loans.append(Loan(name: "", amount: 0))
+        if let savedLoanList = loadLoans() {
             
+            loans += savedLoanList
+            
+            for (position, friendName) in friendNames.enumerated() {
+                
+                friendName.text = loans[position].name
+            }
+            
+            for (position, amountOwed) in amountsOwed.enumerated() {
+                amountOwed.text = String(loans[position].amount)
+            }
+            
+            
+            
+        } else {
+            
+            // Initialize the loans array with an empty set of loans
+            for _ in 0...4 {
+                loans.append(Loan(name: "", amount: 0))
+                
+            }
         }
+        
+        
+        
+
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -65,8 +87,20 @@ class ViewController: UIViewController {
                 loans[position].amount = amount
             }
         }
+        
+        
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(loans, toFile: Loan.ArchiveURL.path)
+        
+        if isSuccessfulSave == false {
+            print("Failed to save ")
+        }
     }
-
+    
+    //Try to load loans from disk
+    func loadLoans() -> [Loan]? {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Loan.ArchiveURL.path) as? [Loan]
+    }
+        
 }
 
 

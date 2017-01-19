@@ -16,7 +16,7 @@ class Loan : NSObject, NSCoding {
     
     //MARK: Paths for archiving data across sessions
     static var DocumentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-    static let ArchiveURL = DocumentsDirectory[0].appendPathComponent("Loans")
+    static let ArchiveURL = DocumentsDirectory[0].appendingPathComponent("Loans")
     
     //MARK: Types
     struct PropertyKey {
