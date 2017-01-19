@@ -34,6 +34,7 @@ class ViewController: UIViewController {
             }
         }
         
+        // Try to load the loans from disk
         if let savedLoanList = loadLoans() {
             
             loans += savedLoanList
